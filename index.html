@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Interactive rating component</title>
+    <link rel="stylesheet" href="css/style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+<body>
+
+  <!-- Rating state start -->
+<div class="container">
+    <div class="card">
+        <div class="new_card "  >
+            <div class="star"></div>
+            <div class="card-text">
+                <h1>How did we do?</h1>
+                <p>Please let us know how we did with your support request. All feedback is appreciated 
+                    to help us improve our offering!</p>
+            </div>
+            <ul class="number-list">
+                <li class="one ">1</li>
+                <li class="one">2</li>
+                <li class="one">3</li>
+                <p class="one">4</p>
+                <p class="one">5</p>
+                 <!-- 2 3 4 5 -->
+            </ul>
+            <button class="bot">Submit</button>
+        </div>
+
+        <div class="rverser_card reverse"> 
+            <div class="image-reverse"><img src="images/illustration-thank-you.svg" alt=""></div>
+            <div class="text-reverse">
+                <p class="clasifed">You selected <!-- Add rating here --> out of 5</p>
+                <h1>Thank you!</h1>
+                <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+                    don’t hesitate to get in touch!</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+  
+
+  <script>
+    const numbers=document.querySelectorAll('.one');
+    const btn=document.querySelector('.bot');
+    const card1=document.querySelector('.new_card');
+    const card2=document.querySelector('.rverser_card');
+    const p=document.querySelector('.clasifed');
+    let value;
+    
+    console.log(numbers);
+    numbers.forEach((bt)=>{
+      // recorro todos los numeros
+      bt.addEventListener('click',()=>{
+        // a cada numero le agrego un escuchador 
+        value=bt.textContent;
+        // guardo su valor para pasarlo        
+        numbers.forEach((es)=>{
+          // aca le saco el fondo a todos los demas elementos
+          es.classList.remove('rone')
+        });
+        bt.classList.add('rone');
+        
+      })
+    });
+    console.log(card1);
+    btn.addEventListener('click',()=>{
+      console.log(card1);
+      card1.classList.add('reverse');
+      card2.classList.remove('reverse');
+      p.textContent=`You selected ${value} out of 5`
+    });
+
+  </script>
+
+
+</body>
+</html>

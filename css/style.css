@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Overpass", sans-serif, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.container {
+  background-color: #121417;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 667px;
+  border-radius: none;
+}
+
+.card {
+  width: 325px;
+  height: 360px;
+  border-radius: 30px;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 100%;
+    height: 800px;
+    border-radius: none;
+  }
+  .card {
+    width: 415px;
+    height: 415px;
+    border-radius: 40px;
+  }
+}
+
+.card {
+  background-color: #202731;
+  padding: 25px 20px 30px 20px;
+  text-align: left;
+}
+
+@media screen and (min-width: 1440px) {
+  .card {
+    padding: 40px;
+  }
+}
+
+.new_card {
+  height: 305px;
+}
+
+.star {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #28313A;
+  background-image: url(../images/icon-star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid #28313A;
+  margin-bottom: 19px;
+}
+
+.card-text {
+  margin-bottom: 25px;
+}
+
+.card-text h1 {
+  color: white;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.card-text p {
+  color: #959eac;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.number-list {
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+@media screen and (min-width: 1440px) {
+  .number-list {
+    margin-top: 30px;
+  }
+}
+
+.one {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #28313A;
+  border: 1px solid #28313A;
+  color: #7c8798;
+  line-height: 2.5;
+  list-style-type: none;
+}
+
+.one:hover {
+  background-color: #fb7413;
+  border: 1px solid #fb7413;
+  color: white;
+}
+
+.rone {
+  background-color: #7c8798;
+  border: 1px solid #7c8798;
+  color: white;
+}
+
+.bot {
+  width: 100%;
+  height: 43px;
+  border-radius: 30px;
+  border: 1px solid #fb7413;
+  background-color: #fb7413;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+.bot:hover {
+  background-color: white;
+  border: 1px solid white;
+  color: #fb7413;
+}
+
+@media screen and (min-width: 1440px) {
+  .bot {
+    margin-top: 20px;
+  }
+}
+
+.rverser_card {
+  width: 100%;
+  height: 315px;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.rverser_card .image-reverse {
+  height: 100px;
+  width: 130px;
+  margin-bottom: 25px;
+  margin-top: 20px;
+}
+
+.rverser_card .text-reverse {
+  height: 175px;
+}
+
+.rverser_card .text-reverse h1 {
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: white;
+}
+
+@media screen and (min-width: 1440px) {
+  .rverser_card .text-reverse h1 {
+    margin-bottom: 30px;
+  }
+}
+
+.rverser_card .text-reverse p {
+  color: #7c8798;
+}
+
+.rverser_card .text-reverse .clasifed {
+  width: 190px;
+  height: 35px;
+  border-radius: 30px;
+  padding: 10px;
+  background-color: #28313A;
+  color: #fb7413;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.reverse {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,140 @@
+
+@import 'funciones';
+$Orange: hsl(25, 97%, 53%); //boton
+$White: hsl(0, 0%, 100%);//texto h1
+$Light_Grey: hsl(217, 12%, 63%); //texto p
+$Medium_Grey: hsl(216, 12%, 54%);// texto numeros
+$Dark_Blue: #202731;//fondo card
+// $Very_Dark_Blue: hsl(216, 12%, 8%);//fondo
+$Fontsize: 15px;
+$font_family:'Overpass', sans-serif;
+
+@include background_size_color($font_family,$Fontsize,400, hsl(216, 12%, 8%),
+    100%,667px,none,
+    325px,360px,30px,
+    100%,800px,none,
+    415px,415px,40px);
+
+.card{
+    background-color:$Dark_Blue;
+    padding: 25px 20px 30px 20px;
+    text-align: left;
+    @media screen and (min-width:1440px) {
+        padding: 40px;
+    }
+}
+.new_card{
+    height: 305px;
+}
+.star{
+    @include with_heigth(40px,40px,50%);
+    background-color:#28313A ;
+    background-image: url(../images/icon-star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #28313A;
+    margin-bottom: 19px;
+}
+.card-text{
+    margin-bottom: 25px;
+    h1{
+        color: $White;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+    p{
+        color: $Light_Grey;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+.number-list{
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+    @media screen and (min-width:1440px) {
+        margin-top: 30px;
+    }
+}
+    .one{
+        @include with_heigth(38px,38px,50%);
+        background-color:#28313A ;
+        border: 1px solid #28313A;
+        color: $Medium_Grey;
+        line-height: 2.5;
+        list-style-type: none;
+        &:hover{
+            background-color:$Orange ;
+            border: 1px solid $Orange;
+            color: $White;
+        }
+    }
+    .rone{
+        background-color:$Medium_Grey ;
+        border: 1px solid $Medium_Grey;
+        color: $White;
+    }
+
+
+.bot{
+    @include with_heigth(100%,43px,30px);
+    border: 1px solid $Orange;
+    background-color: $Orange;
+    color: $White;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    &:hover{
+        background-color:$White ;
+        border: 1px solid $White;
+        color: $Orange;
+    }
+    @media screen and (min-width:1440px) {
+        margin-top: 20px;
+    }
+}
+
+.rverser_card{
+    @include with_heigth(100%,315px,30px);
+
+    // margin:20px;
+    @include center_box_father();
+    flex-direction: column;
+    text-align: center;
+    .image-reverse{
+        height: 100px;
+        width: 130px;
+        margin-bottom: 25px;
+        margin-top: 20px;
+    }
+    .text-reverse{
+        height: 175px;
+        h1{
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: $White;
+            @media screen and (min-width:1440px) {
+                margin-bottom: 30px;
+            }
+        }
+        p{
+            color: $Medium_Grey;
+        }
+
+        .clasifed{
+            @include with_heigth(190px,35px,30px);
+            padding: 10px;
+            background-color: #28313A ;
+            color: $Orange;
+            
+            margin: 0 auto;
+            margin-bottom: 25px;
+        }
+    }
+}
+.reverse{
+    display: none;
+}
